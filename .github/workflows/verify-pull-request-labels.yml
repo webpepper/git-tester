@@ -1,0 +1,16 @@
+name: Verify PR labels
+
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+    branches: [dev]
+
+jobs:
+  verify_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify Pull Request Labels
+        uses: yashhy/pr-label-check-and-comment-action@v1.0.1
+        with:
+          GITHUB_TOKEN: "${{secrets.GITHUB_TOKEN}}"
+          required_labels: "ready-for-dev"

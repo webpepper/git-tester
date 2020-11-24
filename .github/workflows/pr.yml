@@ -1,8 +1,8 @@
-name: Do some testing
+name: Pull Request Test
 
 on:
-  push:
-    branches: [ feature/* ]
+  pull_request:
+    types: [opened, reopened, synchronize]
 
 jobs:
   test_now:
@@ -15,6 +15,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
+
       - name: install dependencies
         run: npm ci
