@@ -7,9 +7,10 @@ on:
 jobs:
   verify_labels:
     runs-on: ubuntu-latest
-    - name: Verify Pull Request Labels
-      uses: jesusvasquez333/verify-pr-label-action@v1.3.1
-      with:
+    steps:
+      - name: Verify Pull Request Labels
+        uses: jesusvasquez333/verify-pr-label-action@v1.3.1
+        with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
           valid-labels: 'deploy-dev'
           pull-request-number: '${{ github.event.pull_request.number }}'
