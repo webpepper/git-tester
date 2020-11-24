@@ -12,4 +12,4 @@ jobs:
         uses: yogevbd/enforce-label-action@2.2.1
         with:
           REQUIRED_LABELS_ALL: "ready-for-dev"
-          REQUIRED_LABELS_ANY_DESCRIPTION: "Label required to merge: ready-for-dev"
+          REQUIRED_LABELS_ALL_DESCRIPTION: "Label required to merge: ready-for-dev"
