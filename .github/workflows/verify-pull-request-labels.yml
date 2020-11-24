@@ -7,9 +7,10 @@ on:
 jobs:
   verify_labels:
     runs-on: ubuntu-latest
-    - name: Verify Pull Request Labels
-      uses: mheap/github-action-required-labels@v1
-      with:
-        mode: minimum
-        count: 1
-        labels: "dev-deploy-ready"
+    steps:
+      - name: Verify Pull Request Labels
+        uses: mheap/github-action-required-labels@v1
+        with:
+          mode: minimum
+          count: 1
+          labels: "dev-deploy-ready"
