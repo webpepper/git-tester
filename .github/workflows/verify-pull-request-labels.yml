@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Verify Pull Request Labels
-        uses: yogevbd/enforce-label-action@2.2.1
+        uses: yashhy/pr-label-check-and-comment-action@v1.0.1
         with:
-          REQUIRED_LABELS_ALL: "ready-for-dev"
-          REQUIRED_LABELS_ALL_DESCRIPTION: "Label required to merge: ready-for-dev"
+          GITHUB_TOKEN: "${{secrets.GITHUB_TOKEN}}"
+          required_labels: "ready-for-dev"
