@@ -3,6 +3,7 @@ name: Verify PR labels
 on:
   pull_request:
     types: [opened, labeled, unlabeled, synchronize]
+    branches: [dev]
 
 jobs:
   verify_labels:
